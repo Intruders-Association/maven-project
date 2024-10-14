@@ -20,11 +20,15 @@
   </build>
 
   <dependencies>
-    <dependency>
+<!--     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit-dep</artifactId>
       <scope>test</scope>
-    </dependency>
+    </dependency> -->
+     <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+     </dependency>
 
     <dependency>
       <groupId>org.hamcrest</groupId>
