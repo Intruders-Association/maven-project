@@ -32,11 +32,11 @@
 
   <dependencies>
 
-    <dependency>
+<!--     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>servlet-api</artifactId>
       <scope>provided</scope>
-    </dependency>
+    </dependency> -->
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
@@ -46,11 +46,11 @@
       <artifactId>javax.servlet.jsp-api</artifactId>
     </dependency>       
 
-    <dependency>
+<!--     <dependency>
       <groupId>javax.servlet.jsp</groupId>
       <artifactId>jsp-api</artifactId>
       <scope>provided</scope>
-    </dependency>
+    </dependency> -->
   </dependencies>
 
 </project>
