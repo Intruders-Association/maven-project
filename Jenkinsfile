@@ -12,7 +12,7 @@ pipeline {
            }
          }
        }       
-       stage ('Deploy to prod') {
+       stage ('Deploy') {
         steps {
           echo 'Deploy step...' 
         }     
