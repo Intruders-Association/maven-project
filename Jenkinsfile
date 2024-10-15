@@ -3,6 +3,7 @@ pipeline {
   stages{
        stage ('Build'){
         steps {
+          echo 'Build...'
           sh 'mvn clean package'
         }
          post {
@@ -11,12 +12,7 @@ pipeline {
              archiveArtifacts artifacts:'**/target/*.war'
            }
          }
-       }
-       stage ('Build') {
-        steps {
-          echo 'Build step...'
-        }
-       }
+       }       
        stage ('Deploy to prod') {
         steps {
           echo 'Deploy step...' 
