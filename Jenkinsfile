@@ -2,8 +2,7 @@ pipeline {
   agent any  
   stages{
        stage ('Build'){
-        steps {
-          echo 'Build...'
+        steps {          
           sh 'mvn clean package'
         }
          post {
