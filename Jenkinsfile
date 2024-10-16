@@ -9,13 +9,13 @@ pipeline {
          post {
            success {
              echo 'Archiving...'
-             archiveArtifacts '**/target/*.war'
+             archiveArtifacts artifacts:'**/target/*.war'
            }
          }
        }       
-       stage ('Deploy') {
+       stage ('Deploy to staging') {
         steps {
-          echo 'Deploy step...' 
+          build job 'deploy-to-staging' 
         }     
        }
   }
