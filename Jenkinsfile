@@ -3,7 +3,7 @@ pipeline {
   stages{
        stage ('Build'){
         steps {
-          cygwin "mvn clean package"
+          shell "mvn clean package"
           // sh 'mvn clean package'
         }
          post {
