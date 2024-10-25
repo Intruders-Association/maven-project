@@ -1,24 +1,44 @@
 pipeline {
   agent any  
   stages{
-       stage ('Build'){
+       stage ('Init'){
         steps {
-          shell "mvn clean package"
-          // sh 'mvn clean package'
+          echo 'Init step...'
+        }         
+       }
+       stage ('Build') {
+        steps {
+          echo 'Build step...'
         }
-         post {
-           success {
-             echo 'Archiving...'
-             archiveArtifacts artifacts:'**/target/*.war'
-           }
-         }
-       }       
-       stage ('Deploy to staging') {
+       }
+       stage ('Deploy') {
         steps {
-          build job:'deploy-to-staging' 
+          echo 'Deploy step...' 
         }     
        }
   }
-}  
+}    
+// pipeline {
+//   agent any  
+//   stages{
+//        stage ('Build'){
+//         steps {
+//           shell "mvn clean package"
+//           // sh 'mvn clean package'
+//         }
+//          post {
+//            success {
+//              echo 'Archiving...'
+//              archiveArtifacts artifacts:'**/target/*.war'
+//            }
+//          }
+//        }       
+//        stage ('Deploy to staging') {
+//         steps {
+//           build job:'deploy-to-staging' 
+//         }     
+//        }
+//   }
+// }  
 // /target
   
